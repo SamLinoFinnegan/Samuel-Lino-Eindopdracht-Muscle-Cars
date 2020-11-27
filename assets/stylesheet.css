@@ -1,0 +1,365 @@
+body{
+    margin:20px ;
+    background-image: url(americanflag1.jpg);
+     font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: ifr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 140px 50px 300px auto 300px 200px 200px;
+    grid-template-areas: 
+        "head head head head head" 
+        "nav nav nav nav nav"
+        "img1 img1 img1 side side" 
+        "show show show side side"
+        "vid vid vid  img2 img2"
+        "img3 img3 img3 form form"
+        "foot foot foot foot foot"; 
+}
+.header {
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(240, 235, 235);
+    text-align: center;
+    font-family: lobster;
+    font-size: large;
+    color: rgb(83, 83, 83);
+
+
+}
+
+.navbar{
+    grid-area: nav;
+    display: flex;
+    justify-content: flex-end;
+    background-color:  rgb(184, 155, 155);
+    font-size: 20px;
+
+}
+.navbar li{
+    display: inline;
+    border-left: black 2px solid;
+    padding-left:20px;
+    padding-right:20px ;
+
+}
+.navbar a{
+    color:  rgb(65, 54, 54);
+    text-decoration: none;
+
+}
+.navbar a:hover{
+    color: black;
+    font-weight: bold;
+}
+.img1{
+    grid-area: img1;  
+    display: flex;
+    justify-content: center;
+
+}
+.img1__image{
+    width: 100%;
+}
+
+.showcase{
+    
+    grid-area: show;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+    padding: 50px;
+}
+.showcase h2{
+    color: red;
+}
+.sidebar{
+    grid-area: side;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: lightgray;
+}
+#video{
+    grid-area: vid;   
+}
+
+.img2{
+    margin-top: 50px;
+    grid-area: img2;
+    display: flex;
+    
+}
+.img2__image{
+    width: 100%;
+}
+
+.img3{
+    margin: 0px 60px 0px 60px;
+    grid-area: img3;
+    display: flex;
+    justify-content: center;
+    
+
+}
+.img3__image{
+    width: 80%;
+}
+
+#form{
+    grid-area: form;
+    border: 1px solid black;
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+}
+.footer{
+    grid-area: foot;
+    background-color: rgb(131, 108, 108);
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+
+}
+/* Styles for the Dodge and Mustang pages*/
+.container1 {
+    height: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 110px 50px 300px auto 300px 200px;
+    grid-template-areas: 
+        "head head head head head" 
+        "nav nav  nav  nav  nav"
+        "img img img img side" 
+        "show show show show side"
+        "vid vid vid vid vid"
+        "foot foot foot foot foot"; 
+}
+
+.img{
+    grid-area: img;  
+    display: flex;
+    justify-content: center;
+
+}
+.img__image{
+    width: 100%;
+}
+
+.showcase1{
+    grid-area: show;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+    padding-left:20px;
+    padding-right: 50px;
+}
+.showcase1 h2{
+    color: blue;
+}
+.sidebardodge{
+    grid-area: side;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:25px;
+    padding: 20px;
+    background-color: lightgray;
+    color:red;
+}
+.sidebarmustang{
+    grid-area: side;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    padding: 20px;
+    background-color: lightgray;
+    color: blue;
+
+}
+#video{
+    grid-area: vid;
+    display: flex;
+    justify-content: center;
+    
+}
+/* media queries for tablet*/
+@media(max-width:800px){
+    .container {
+        height: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 110px 40px 300px 150px auto auto auto auto auto;
+        grid-template-areas: 
+            "head head head " 
+            "nav nav  nav "
+            "img1 img1 img1" 
+            "show show show"
+            "vid vid vid"
+            "img2 img2 img2"
+            "form form side"
+            "img3 img3 img3"
+            "foot foot foot"; 
+           
+    }
+    .container1{
+        height: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 110px 40px 300px auto auto auto  auto;
+        grid-template-areas: 
+            "head head head " 
+            "nav nav  nav "
+            "img img img" 
+            "show show show"
+            "vid vid vid"
+            "side side side"
+            "foot foot foot"; 
+           
+    }
+    .header {
+        grid-area: head;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(240, 235, 235);
+        text-align: center;
+        font-size: 12px;
+        color: rgb(83, 83, 83);
+    
+    }
+    .navbar{
+        grid-area: nav;
+        display: flex;
+        justify-content: flex-end;
+        background-color:  rgb(184, 155, 155);
+        font-size: 15px;
+    
+    }
+    .navbar li{
+        display: inline;
+        border-left: black 2px solid;
+        padding-left:20px;
+        padding-right:20px ;
+    
+    }
+    .navbar a{
+        color:  rgb(65, 54, 54);
+        text-decoration: none;
+    
+    }
+    .navbar a:hover{
+        color: black;
+        font-weight: bold;
+    }
+    .img{
+        grid-area: img;  
+        display: flex;
+        justify-content: center;
+    
+    }
+    .img__image{
+        width: 100%;
+    }
+    
+    .img1{
+        grid-area: img1;
+        grid-column: span 3;
+        
+    
+    }
+    .showcase{
+        grid-area: show;
+        font-size: 12px;
+        background-color: lightgray;
+        padding-left:20px;
+        padding-right: 50px;
+    }
+    .showcase h2{
+        color: red;
+        font-size: 12px;
+
+    }
+    .sidebar{
+        grid-area: side;
+        padding: 10px;
+        background-color: lightgray;
+        font-size: 13px;
+    }
+    #video{
+        grid-area: vid;
+        
+    }
+    .img2{
+        grid-area: img2;
+        
+    }
+    .img3{
+        grid-area: img3;
+    
+    }
+    #form{
+        grid-area: form;
+        border: 1px solid black;
+        background-color: lightgray;
+        padding: 20px;
+        text-align: center;
+    }
+    .footer{
+        grid-area: foot;
+        background-color: rgb(131, 108, 108);
+        display: flex;
+        align-items: flex-end;
+        padding: 10px;
+        font-size: 12px;
+    
+    }
+    .showcase1{
+        grid-area: show;
+        font-size:12px;
+        background-color: lightgray;
+        padding-left:10px;
+        padding-right: 20px;
+    }
+    .showcase1 h2{
+        color: blue;
+        font-size:12px;
+
+    }
+    .sidebardodge{
+        grid-area: side;
+        font-size:15px;
+        padding: 10px;
+        background-color: lightgray;
+        color:red;
+    }
+    .sidebarmustang{
+        grid-area: side;
+        font-size: 15px;
+        padding: 10px;
+        background-color: lightgray;
+        color: blue;
+    
+    }
+    #video{
+        grid-area: vid;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+}
+/* i wasnt able to figure out how to make the img responsive to size without changing the structure of the grid*/
+
+/* media queries for cellphone*/
+@media(max-width:500px){
+    .sidebar{
+        grid-area: side;
+        padding: 5px;
+        background-color: lightgray;
+        font-size: 12px;
+    }
+
+
+
+}
